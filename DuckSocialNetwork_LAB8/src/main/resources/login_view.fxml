@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0"
+            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LoginController">
+
+    <center>
+        <StackPane>
+            <!-- LIMITAM LOGIN BOX-UL -->
+            <VBox alignment="CENTER" spacing="15">
+
+                <!-- Title -->
+                <Label text="Welcome to DuckSocialNetwork" textFill="#593535">
+                    <font><Font name="Tw Cen MT" size="24" /></font>
+                </Label>
+
+                <Label text="Login to your account">
+                    <font><Font name="Tw Cen MT" size="22.0" /></font>
+                </Label>
+
+                <!-- Email -->
+                <VBox maxWidth="300" spacing="5">
+                    <Label text="Email">
+                        <font><Font name="Tw Cen MT" size="17" /></font>
+                    </Label>
+                    <TextField fx:id="textFieldEmail" maxWidth="300" />
+                </VBox>
+
+                <!-- Password -->
+                <VBox maxWidth="300" prefHeight="60.0" prefWidth="300.0" spacing="5">
+                    <Label text="Password">
+                        <font><Font name="Tw Cen MT" size="17" /></font>
+                    </Label>
+                    <PasswordField fx:id="passwordFieldPassword" maxWidth="300" />
+                </VBox>
+            <VBox alignment="CENTER" prefHeight="46.0" prefWidth="350.0">
+               <children>
+      
+                            <Button fx:id="buttonLogin" onAction="#handleButtonLogin" prefHeight="44.0" prefWidth="299.0" text="Login now">
+                     <font>
+                        <Font name="Tw Cen MT" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="0.0" prefWidth="350.0">
+               <children>
+                  <HBox alignment="CENTER" opacity="0.52" prefHeight="39.0" prefWidth="350.0" spacing="20.0">
+                     <children>
+                        <Label alignment="BASELINE_LEFT" text="Don't have an account?">
+                           <font>
+                              <Font name="Tw Cen MT" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelSignUp" alignment="BASELINE_LEFT" layoutX="132.0" layoutY="10.0" text="Sign up">
+                           <font>
+                              <Font name="Tw Cen MT" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+
+            </VBox>
+
+            <StackPane.margin>
+                <Insets top="30" />
+            </StackPane.margin>
+        </StackPane>
+    </center>
+</BorderPane>

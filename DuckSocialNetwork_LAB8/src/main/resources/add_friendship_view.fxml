@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="430.0" style="-fx-background-color: #a87093;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.AddFriendshipController">
+    <center>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="textFieldUser1" layoutX="176.0" layoutY="141.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: #c28cae;" />
+                <TextField fx:id="textFieldUser2" layoutX="176.0" layoutY="179.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: #c28cae;" />
+                <Label alignment="TOP_LEFT" layoutX="45.0" layoutY="142.0" text="User1 Id:" textFill="#4b233d">
+                    <font>
+                        <Font name="Tw Cen MT" size="20.0" />
+                    </font>
+                </Label>
+                <Label alignment="TOP_LEFT" layoutX="44.0" layoutY="182.0" text="User2 Id:" textFill="#4b233d">
+                    <font>
+                        <Font name="Tw Cen MT" size="20.0" />
+                    </font>
+                </Label>
+                <Label alignment="TOP_CENTER" layoutX="101.0" layoutY="49.0" text="Add A New Friendship" textFill="#4b233d">
+                    <font>
+                        <Font name="Tw Cen MT Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Button layoutX="45.0" layoutY="297.0" mnemonicParsing="false" onAction="#onSave" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: #825571;" text="Save" textFill="#3e1e32">
+                    <font>
+                        <Font name="Tw Cen MT Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="269.0" layoutY="297.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: #825571;" text="Cancel" textFill="#3e1e32">
+                    <font>
+                        <Font name="Tw Cen MT Bold" size="16.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+    </center>
+</BorderPane>

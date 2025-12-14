@@ -1,0 +1,150 @@
+/* style.css */
+
+.table-view .column-header-background {
+    -fx-background-color: #eeb7b9;
+}
+
+/* 2. Celula individuală a fiecărei coloane */
+.table-view .column-header {
+    -fx-background-color: transparent; /* Transparent ca să se vadă fundalul de mai sus */
+    -fx-border-color: white; /* Linii albe între coloane */
+    -fx-border-width: 0 1px 0 0; /* Linie doar în dreapta */
+}
+
+/* 3. Textul din antet (Label) */
+.table-view .column-header .label {
+    -fx-text-fill: #4a2c2c; /* Culoarea textului */
+    -fx-font-weight: bold;  /* Text ingrosat */
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* 4. Zona goală din dreapta coloanelor (filler) */
+.table-view .filler {
+    -fx-background-color: #eeb7b9; /* Aceeași culoare ca header-ul */
+}
+
+.button {
+    -fx-background-color: #d28a8d; /* Culoarea ceruta */
+    -fx-text-fill: #4a2c2c; /* Text maro inchis (pentru contrast bun cu roz) */
+    -fx-background-radius: 5px; /* Colturi putin rotunjite */
+    -fx-cursor: hand; /* Cursor de mana cand pui mouse-ul */
+}
+
+.button:hover {
+    -fx-background-color: #d99799; /* Se face putin mai inchis cand pui mouse-ul pe el */
+}
+
+.button:pressed {
+    -fx-background-color: #c48688; /* Culoarea cand dai click */
+}
+/* 1. FONTUL PESTE TOT și FUNDALUL GENERAL */
+.root {
+    -fx-font-family: "Tw Cen MT";
+    /*-fx-font-size: 20px;
+    /* Asta va schimba gri-ul din spatele butoanelor cu rozul deschis */
+    -fx-background-color: #FFF0F5;
+}
+
+/* 2. TABELUL (Interiorul) - Roz foarte deschis */
+/* Se asigură că rândurile (și cele pare și cele impare) sunt roz */
+.table-row-cell {
+    -fx-background-color: #FFF0F5; /* LavenderBlush */
+    -fx-text-fill: #4e1213; /* Text negru ca să se vadă */
+}
+
+/*!* Eliminăm culorile alternative implicite (gri/alb) *!*/
+/*.table-view .table-row-cell:odd {*/
+/*    -fx-background-color: #FFF0F5;*/
+/*}*/
+
+/* Culoarea când selectezi un rând (opțional, ca să se vadă selecția) */
+.table-row-cell:selected {
+    -fx-background-color: #E6C8CA; /* O nuanță mai închisă la selecție */
+}
+
+/* 3. COMBO BOX (Lista din dreapta jos) - Mai deschis decât butoanele */
+/* 1. COMBO BOX - Aspectul general (închis) */
+.combo-box {
+    -fx-background-color: #ffffff; /* Alb - cum ai vrut */
+    -fx-border-color: #dcb4b8;     /* Bordură rozalie */
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-font-family: "Tw Cen MT";
+    -fx-font-size: 16px; /* Ajustează mărimea dacă e prea mare */
+}
+
+/* 2. SĂGEATA din dreapta */
+/* Facem butonul săgeții transparent ca să nu se vadă ca o cutie separată gri */
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+/* Colorăm săgeata propriu-zisă (triunghiul mic) */
+.combo-box .arrow {
+    -fx-background-color: #D68A8A; /* Un gri neutru sau poți pune #D68A8A (rozul butoanelor) */
+}
+
+/* 3. LISTA CARE SE DESCHIDE (Popup) */
+.combo-box-popup .list-view {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2); /* O umbră fină */
+}
+
+/* 4. ELEMENTELE DIN LISTĂ (Celulele) */
+.combo-box-popup .list-cell {
+    -fx-font-family: "Tw Cen MT";
+    -fx-background-color: #fadcdd;
+    -fx-text-fill: black;
+    -fx-padding: 5 10 5 10; /* Spațiere ca să nu fie textul îhesuit */
+}
+
+/* Când treci cu mouse-ul peste o opțiune (Hover) */
+.combo-box-popup .list-cell:filled:hover {
+    -fx-background-color: #FFF0F5; /* Acel roz foarte deschis din tabel */
+    -fx-text-fill: black;
+}
+
+/* Opțiunea selectată */
+.combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: #FFD1DC; /* Rozul mediu (ca la tab-uri) */
+}
+
+/* 1. Banda din spatele tab-urilor (header-ul) */
+.tab-header-background {
+    /* O facem transparentă sau la fel ca fundalul ferestrei */
+    -fx-background-color: #FFF0F5;
+}
+
+/* 2. TAB-URILE (Starea normală) */
+.tab {
+    -fx-font-family: "Tw Cen MT";
+    -fx-font-size: 15px; /* Puțin mai mic decât textul din tabel, arată mai elegant */
+
+    /* CULOAREA: Roz mediu (între butoane și fundal) */
+    -fx-background-color: #FFD1DC;
+
+    /* Bordură fină ca să se distingă */
+    -fx-border-color: #D68A8A;
+    -fx-border-width: 1px 1px 0 1px; /* Stânga, Sus, Dreapta (fără jos) */
+    -fx-background-radius: 8 8 0 0;  /* Colțuri rotunjite sus */
+    -fx-background-insets: 0 1 0 1;  /* Spațiere mică între ele */
+}
+
+/* Textul din interiorul tab-ului */
+.tab .tab-label {
+    -fx-text-fill: #555555; /* Un gri închis pentru text, nu negru strident */
+}
+
+/* 3. TAB-ul SELECTAT (Activ) */
+/* Este bine ca tab-ul activ să se "unească" cu tabelul de jos */
+.tab:selected {
+    -fx-background-color: #FFF0F5; /* Aceeași culoare ca fundalul ferestrei/tabelului */
+    -fx-border-bottom-color: #FFF0F5; /* Ascundem linia de jos ca să pară unit */
+    -fx-font-weight: bold; /* Text îngroșat pentru tab-ul activ */
+}
+
+/* 4. Când treci cu mouse-ul peste un tab (Hover) */
+.tab:hover {
+    -fx-background-color: #FFC1CC; /* O idee mai închis la hover */
+    -fx-cursor: hand;
+}

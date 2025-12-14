@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="360.0"  xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.controller.ChatController">
+    <children>
+        <VBox prefHeight="500.0" prefWidth="360.0" spacing="5.0">
+            <children>
+                <HBox prefHeight="540.0" prefWidth="360.0">
+                    <children>
+                        <ListView fx:id="listViewMessages" prefHeight="465.0" prefWidth="349.0" />
+                    </children>
+                </HBox>
+                <Label fx:id="labelSelectedMessage" style="-fx-font-style: italic; -fx-text-fill: gray;" text="No message selected" />
+                <HBox alignment="CENTER" prefHeight="81.0" prefWidth="382.0" spacing="5.0">
+                    <children>
+                        <TextField fx:id="textFieldMessage" prefHeight="71.0" prefWidth="242.0" promptText="Send a message..." />
+                        <VBox spacing="5.0">
+                            <Button fx:id="buttonReply" mnemonicParsing="false" prefHeight=" 33.0" prefWidth="102.0" text="Reply" onAction="#onReply" />
+                            <Button fx:id="buttonSend" mnemonicParsing="false" prefHeight="33.0" prefWidth="102.0" text="Send" onAction="#onSend"/>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+    </padding>
+</AnchorPane>

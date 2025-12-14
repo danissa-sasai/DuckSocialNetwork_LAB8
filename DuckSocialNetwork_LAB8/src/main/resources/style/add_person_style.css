@@ -1,0 +1,58 @@
+/* Setează culoarea CĂII (linia pe care se mișcă indicatorul) */
+.slider .track {
+    -fx-background-color: -fx-outer-border, linear-gradient(to top, derive(-fx-text-box-border, -10%), -fx-text-box-border),
+    linear-gradient(to top, derive(-fx-text-box-border, 10%), -fx-text-box-border);
+    /* Culoarea principală a căii (track-ului) */
+    -fx-background-color: #c5abd1;
+    -fx-background-insets: 0 -1 0 -1, 0, 1;
+    -fx-padding: 0.25em; /* Grosimea căii */
+}
+
+/* Setează culoarea INDICATORULUI (cercul/pătratul pe care îl tragi) */
+.slider .thumb {
+    /* Culoarea indicatorului */
+    -fx-background-color: #754e87;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 1.0em; /* Îl face rotund */
+    -fx-padding: 0.6em;
+}
+
+/* Setează culoarea PORȚIUNII DE UMPLUTURĂ (partea stângă a indicatorului) */
+/* Aceasta se aplică în mod implicit sub forma căii */
+.slider:show-value .track,
+.slider:show-tick-marks .track {
+    -fx-background-color: #8f42a6, linear-gradient(to top, #c5abd1, #c5abd1);
+}
+
+
+/* 1. Setează culoarea de fundal pentru containerul DatePicker */
+.date-picker {
+    -fx-background-color: #c5abd1;
+}
+
+/* 2. Vizează explicit câmpul de text intern (care altfel rămâne alb) */
+.date-picker .date-picker-display-node {
+    -fx-background-color: #c5abd1;
+    -fx-background-insets: 0;
+    -fx-padding: 0.333333em 0.583333em 0.333333em 0.583333em;
+    /* Linia de mai jos asigură că textul este ușor de citit pe fundalul tău */
+    -fx-text-fill: black;
+}
+
+/* Vizează butonul săgeată din interiorul DatePicker-ului */
+.date-picker .arrow-button {
+    /* Setează fundalul butonului (opțional, dacă vrei să-l ascunzi) */
+    -fx-background-color: transparent;
+}
+
+/* Vizează ICONIȚA (Săgeata/Vârful) din interiorul butonului */
+.date-picker .arrow-button .arrow {
+    /* Culoarea pentru iconița calendarului/săgeata.
+       Folosim un mov mai închis pentru a fi vizibil pe fundalul tău deschis (#c5abd1). */
+    -fx-background-color: #9e85a6;
+}
+
+/* Opțional: Culoarea hover-ului (când utilizatorul trece cu mouse-ul) */
+.date-picker .arrow-button:hover {
+    -fx-background-color: #b59ebf; /* O nuanță mai intensă la hover */
+}
